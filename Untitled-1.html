@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <title>Bootrstrap Example</title> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+        .container-fluid{
+            position: relative;
+            padding-bottom:200px;
+            font-family:DFKai-sb;
+            font-size:1.2cm;
+            font-weight:bolder;
+            background-color:rgb(82, 145, 103);
+        }
+        .了解更多{
+            position: absolute;
+            color: blue;
+            bottom: 1px;
+            right: 1px;
+            font-size:1cm;
+            
+        }
+        
+            </style>
+</head> 
+<body data-spy="scroll" data-target=".navbar" data-offset="50"> 
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="標題">標題</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#首頁">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#部落介紹">部落介紹</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#風景區">風景區</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#交通路線">交通路線</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#其他">其他</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="首頁" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#首頁" data-slide-to="0" class="active"></li>
+            <li data-target="#首頁" data-slide-to="1"></li>
+            <li data-target="#首頁" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="0.jpg" alt="部落介紹" width="1100" height="500">
+                <div class="carousel-caption">
+                    
+                    <span style="color:rgb(95, 104, 99); font-family:DFKai-sb; font-size:1.2cm; font-weight:bolder;">部落介紹</span>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="1.jpg" alt="風景區" width="1100" height="500">
+                <div class="carousel-caption">
+                    <h3>風景區</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="2.jpg" alt="交通路線" width="1100" height="500">
+                <div class="carousel-caption">
+                    <h3>交通路線</h3>
+                </div>
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#首頁" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#首頁" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+    <div class="container-fluid">
+        部落介紹
+        <div class="了解更多">
+            <a target="_blank" href="http://news.fcu.edu.tw/wSite/lp?ctNode=15362&mp=9000&idPath=8640_14979_15362">了解更多</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        風景區
+        <div class="了解更多">
+            <a target="_blank" href="http://news.fcu.edu.tw/wSite/lp?ctNode=15362&mp=9000&idPath=8640_14979_15362">了解更多</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        交通路線
+        <div class="了解更多" style="color: blue; bottom: 0; right: 0;">
+            <a target="_blank" href="map.html">了解更多</a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        其他
+        <div class="了解更多" style="color: blue; bottom: 3px; right: 1px;">
+            <a target="_blank" href="http://news.fcu.edu.tw/wSite/lp?ctNode=15362&mp=9000&idPath=8640_14979_15362">了解更多</a>
+        </div>
+    </div>
+</body>
+</html> 
