@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 100%;
+       }
+		html, body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		}
+    </style>
+  </head>
+<body>
+	<div id="map"></div>
+	
+	<script>
+	var map;
+	function initMap() {
+		var fcu={lat: 23.623195, lng: 120.887782};
+		map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: fcu
+          });
+		var marker = new google.maps.Marker({
+          position: fcu,
+          map: map
+        });
+		var icons = {
+			view:{icon:'view.png'},
+			park:{icon:'park.png'},
+			camera:{icon:'camera.png'}
+		}
+		var features = [{
+				position: new google.maps.LatLng(23.780769, 120.950712),
+				type: 'camera',
+				content:"ÂùÀs¤ô·½¦Q¾ô"
+			}, {
+				position: new google.maps.LatLng(23.683561, 120.840121),
+				type: 'camera',
+				content:"©WÃu¯[¼þ¥ú¤§¾ô"
+			}, {
+				position: new google.maps.LatLng(23.644149, 120.859294),
+				type: 'camera',
+				content:"¬h®a±ö¶é"
+			}, {
+				position: new google.maps.LatLng(23.599026, 120.884194),
+				type: 'park',
+				content:"±æ¶m¥¬¹A´ç°²³¡¸¨"
+			}, {
+				position: new google.maps.LatLng(23.549426, 120.872042),
+				type: 'camera',
+				content:"¯óÀY©W¥É¤sÆ[¥ú¯ù¶é"
+			}, {
+				position: new google.maps.LatLng(23.512582, 120.894355),
+				type: 'view',
+				content:"¶ð¶ð¥[¤Ò©d¯«¤ì"
+			}
+		];
+		
+		features.forEach(function(feature) {
+				var marker = new google.maps.Marker({
+				position: feature.position,
+				icon: icons[feature.type].icon,
+				map: map
+				});
+				
+				var contentString = feature.content
+				var infowindow = new google.maps.InfoWindow({
+					content: contentString
+					});
+				marker.addListener('mouseover', function() {
+				infowindow.open(map, marker);
+				setTimeout(function(){ infowindow.close(); }, 2000);
+					
+				});
+			
+				
+				
+				
+				
+				
+				});
+			
+				
+		
+	}
+		
+	</script>
+    <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9ntl3orKBSiNq1LewwO19T9C5LhDMqSY&callback=initMap">
+    </script>
+  </body>
+</html>
