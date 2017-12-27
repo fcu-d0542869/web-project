@@ -1,8 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <title>Bootrstrap Example</title> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <style>
-       #map {
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+		#map {
         height: 100%;
        }
 		html, body {
@@ -10,9 +22,35 @@
 		margin: 0;
 		padding: 0;
 		}
-    </style>
-  </head>
-<body>
+            </style>
+</head> 
+<body data-spy="scroll" data-target=".navbar" data-offset="50" bgcolor="#BBFF00"> 
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="標題">標題</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#首頁">首頁</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#部落介紹">部落介紹</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#風景區">風景區</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#交通路線">交通路線</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#其他">其他</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
 	<div id="map"></div>
 	
 	<script>
@@ -35,27 +73,27 @@
 		var features = [{
 				position: new google.maps.LatLng(23.780769, 120.950712),
 				type: 'camera',
-				content:"���s�����Q��"
+				content:"雙龍水源吊橋"
 			}, {
 				position: new google.maps.LatLng(23.683561, 120.840121),
 				type: 'camera',
-				content:"�W�u�[��������"
+				content:"坪瀨琉璃光之橋"
 			}, {
 				position: new google.maps.LatLng(23.644149, 120.859294),
 				type: 'camera',
-				content:"�h�a����"
+				content:"柳家梅園"
 			}, {
 				position: new google.maps.LatLng(23.599026, 120.884194),
 				type: 'park',
-				content:"��m���A�簲����"
+				content:"望鄉布農渡假部落"
 			}, {
 				position: new google.maps.LatLng(23.549426, 120.872042),
 				type: 'camera',
-				content:"���Y�W�ɤs�[������"
+				content:"草頭坪玉山觀光茶園"
 			}, {
 				position: new google.maps.LatLng(23.512582, 120.894355),
 				type: 'view',
-				content:"���[�ҩd����"
+				content:"塔塔加夫妻神木"
 			}
 		];
 		
@@ -91,5 +129,12 @@
     <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9ntl3orKBSiNq1LewwO19T9C5LhDMqSY&callback=initMap">
     </script>
-  </body>
-</html>
+	<font   size=10> 
+	<center>
+	<p style="background-color:#3cb371;">南下路線:3號國道至名間交流道->台16線集集鎮->水里鄉->台21線(新中橫公路)->信義鄉</p>
+	<p style="background-color:#3cb371;">北上路線:3號國道至竹山交流道->台16線集集鎮->水里鄉->台21線(新中橫公路)->信義鄉</p>
+	<p style="background-color:#3cb371;">火車路線:坐火車到二水站->往車程(水里)->水里站下車->搭乘員林客運往信義鄉</p>
+	</center>
+	</font>
+</body>
+</html> 
